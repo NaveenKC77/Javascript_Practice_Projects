@@ -1,0 +1,132 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,700&display=swap');
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  width:100vw;
+  height: 100vh;
+}
+.container{
+  height:100%;
+  width:100%;
+  margin:0 auto;
+  transition: all 200ms ease-in-out 0s;
+
+
+}
+
+h1{
+  text-align: center;
+  margin: 0.5rem auto 2rem auto;
+  font-size: 4rem;
+  text-transform: capitalize;
+  font-family: 'Noto Serif', serif;
+}
+
+.image{
+  height:100%;
+  width:100%;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 200ms ease-in-out 0s;
+
+}
+
+.image:hover{
+  transform: translateY(-2px);
+  box-shadow: 1px 1px 1px;
+}
+.gallery{
+  height:100%;
+  width:100%;
+  display: grid;
+  grid-gap:5px;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  grid-auto-rows:300px;
+  place-items:center;
+  padding: 0.5rem;
+}
+
+.popup{
+  position: fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  min-height: 100%;
+  min-width: 100%;
+  background: rgba(0,0,1,0.8);
+  transform: translateY(-100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 200ms ease-in-out 0s;
+
+
+
+}
+
+#selectedImage{
+  height:80%;
+  width:80%;
+  border-radius: 10px;
+  border: solid 2px white;
+  transition: all 200ms linear 0.2s;
+
+}
+.prevBtn{
+  position: absolute;
+  left:12%;
+  bottom:49%;
+  background:transparent;
+  color:white;
+  font-size: 3rem;
+  height:2rem;
+  width:20px;
+  border:none;
+
+}
+
+.nextBtn{
+  position: absolute;
+  right:12%;
+  bottom:49%;
+  background:transparent;
+  font-size: 3rem;
+  height:2rem;
+  width:20px;
+  color:white;
+  border: none;
+}
+
+.exitBtn{
+  position: absolute;
+  right:12%;
+  top:12%;
+  color:red;
+  border:none;
+  font-size: 2rem;
+  background: transparent;
+}
+
+.btn:hover{
+  transform: scale(1.5);
+}
+
+@media screen and (max-width: 404px) {
+
+h1{
+  font-size: 1.5rem;
+}
+
+.image{
+    padding:0 1rem;
+}
+
+
+}

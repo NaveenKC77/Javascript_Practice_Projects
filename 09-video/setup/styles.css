@@ -1,0 +1,82 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+
+*{margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+header{
+  min-height:100vh;
+  position: relative;
+  display: grid;
+  place-items:center;
+}
+
+.pre-loader{
+  position: fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  display: grid;
+  place-items:center;
+  /* z-index:100; */
+}
+
+.hide-preloader{
+  z-index:-99;
+}
+.video-container{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+h1{
+z-index:10;
+position: absolute;
+color:white;
+text-transform: capitalize;
+font-size: 3rem;
+font-family: 'Josefin Sans', sans-serif;
+}
+
+.video-btn{
+  position: absolute;
+  left:1rem;
+  bottom:4rem;
+  display: flex;
+  padding:0.4rem 0.6rem;
+  border-radius: 10%;
+  border: none;
+  color:hsl(205, 63%, 48%);
+
+}
+
+.video-btn span{
+  display: inline-block;
+border-radius: 10%;
+border: none;
+}
+
+.switch-play{
+  padding-right:18px;
+}
+
+.switch{
+  border: none;
+  position: absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:50%;
+  background: hsl(205, 63%, 48%);
+  transition: transform 0.2s linear 100ms;
+}
+
+.slide{
+transform: translateX(50px);
+align-self: flex-end;
+}
